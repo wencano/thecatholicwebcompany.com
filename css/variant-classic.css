@@ -1,0 +1,134 @@
+/* === Classic Variant ===
+   Luxury pastel rose + gold with elegant glass.
+*/
+:root {
+    --c-bg: #fdf6f6;
+    --c-surface: #faefef;
+    --c-text: #45333a;
+    --c-text-muted: #7b656f;
+    --c-heading: #28141b;
+    --c-primary: #8f3151;
+    --c-primary-fg: #fff8fb;
+    --c-accent: #d9b165;
+    --c-border: rgba(169, 104, 128, 0.25);
+    --c-hero-bg: #6e2340;
+    --c-hero-fg: #fff8fb;
+    --c-footer-bg: #2d131d;
+    --c-footer-fg: #ebd5df;
+    --c-cta-bg: #892f51;
+    --c-cta-fg: #fff8fb;
+    --c-card-bg: rgba(255, 247, 251, 0.7);
+    --c-card-border: rgba(255, 231, 241, 0.8);
+    --c-switcher-bg: rgba(255, 244, 248, 0.72);
+    --c-glow-1: rgba(255, 210, 227, 0.4);
+    --c-glow-2: rgba(255, 243, 189, 0.26);
+    --c-glow-3: rgba(246, 176, 207, 0.24);
+
+    --f-body: 'Manrope', system-ui, sans-serif;
+    --f-heading: 'Cormorant Garamond', Georgia, serif;
+    --radius: 6px;
+    --radius-lg: 10px;
+}
+
+.variant-classic .hero {
+    background:
+        radial-gradient(circle at 14% 18%, rgba(255, 214, 229, 0.24), transparent 34%),
+        radial-gradient(circle at 86% 20%, rgba(255, 228, 174, 0.28), transparent 35%),
+        linear-gradient(130deg, #5a1b33, #7e2a4b 42%, #78345e 70%, #5f2750);
+    width: 100%;
+    margin: 0;
+    padding-top: clamp(3.8rem, 7vw, 6.2rem);
+    padding-bottom: clamp(3.8rem, 7vw, 6.2rem);
+    min-height: 460px;
+    border-radius: 0;
+}
+
+.variant-classic .site-header .container {
+    width: 100%;
+}
+
+.variant-classic .announcement-bar .container {
+    width: 100%;
+    max-width: none;
+}
+
+.variant-classic .header-inner,
+.variant-classic .cta-banner {
+    border-radius: 10px;
+}
+
+.variant-classic .header-inner {
+    border: 0;
+}
+
+.variant-classic .site-header .container {
+    width: 100%;
+}
+
+.variant-classic .site-header {
+    margin-top: 0;
+}
+
+.variant-classic .header-inner {
+    border-radius: 0;
+}
+
+.variant-classic .nav-link,
+.variant-classic .switcher-btn {
+    border-radius: 6px;
+}
+
+.variant-classic .nav-toggle-bar {
+    background: #ffffff;
+}
+
+.variant-classic .hero-title,
+.variant-classic .section-title {
+    letter-spacing: -0.01em;
+}
+
+.variant-classic .section-title {
+    position: relative;
+    padding-bottom: 0.4rem;
+}
+
+.variant-classic .section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 84px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--c-accent), transparent);
+}
+
+.variant-classic .hero-title::after,
+.variant-classic .cta-title::after {
+    display: none;
+}
+
+.variant-classic .prop-card,
+.variant-classic .testimonial-card,
+.variant-classic .team-card,
+.variant-classic .portfolio-card {
+    border-color: rgba(222, 189, 200, 0.72);
+}
+
+.variant-classic .testimonial-card::before {
+    content: '\201C';
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: rgba(217, 177, 101, 0.5);
+    position: absolute;
+    inset: 0.2rem auto auto 1rem;
+    pointer-events: none;
+}
+
+.variant-classic .testimonial-card { position: relative; padding-top: 2.7rem; }
+.variant-classic .portfolio-icon,
+.variant-classic .value-number { color: var(--c-accent); }
+
+.variant-classic .switcher-btn.is-active {
+    background: linear-gradient(120deg, var(--c-primary), color-mix(in srgb, var(--c-primary) 70%, var(--c-accent)));
+}

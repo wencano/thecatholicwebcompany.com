@@ -1,0 +1,117 @@
+/* === Editorial Variant ===
+   Dark-glass magazine aesthetic with moving ink gradients.
+*/
+:root {
+    --c-bg: #f6f8fa;
+    --c-surface: #ffffff;
+    --c-text: #24292f;
+    --c-text-muted: #57606a;
+    --c-heading: #1f2328;
+    --c-primary: #0969da;
+    --c-primary-fg: #ffffff;
+    --c-accent: #1f6feb;
+    --c-border: rgba(27, 31, 36, 0.15);
+    --c-hero-bg: #0d1117;
+    --c-hero-fg: #f0f6fc;
+    --c-footer-bg: #161b22;
+    --c-footer-fg: #c9d1d9;
+    --c-cta-bg: #1f6feb;
+    --c-cta-fg: #ffffff;
+    --c-card-bg: #ffffff;
+    --c-card-border: rgba(27, 31, 36, 0.12);
+    --c-switcher-bg: rgba(255, 255, 255, 0.94);
+    --c-glow-1: transparent;
+    --c-glow-2: transparent;
+    --c-glow-3: transparent;
+
+    --f-body: 'Source Sans 3', system-ui, sans-serif;
+    --f-heading: 'Lora', Georgia, serif;
+
+    --fs-hero: clamp(2.8rem, 6vw + 1rem, 5.2rem);
+    --fs-3xl: clamp(2.1rem, 3.2vw + 1rem, 3.4rem);
+    --radius: 6px;
+    --radius-lg: 8px;
+}
+
+.variant-editorial .header-inner {
+    background: #161b22;
+    border: 0;
+    border-radius: 0;
+}
+
+.variant-editorial .hero {
+    background:
+        linear-gradient(180deg, #0d1117 0%, #161b22 100%);
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+}
+
+.variant-editorial .site-header .container {
+    width: 100%;
+}
+
+.variant-editorial .announcement-bar .container {
+    width: 100%;
+    max-width: none;
+}
+
+.variant-editorial .site-header {
+    margin-top: 0;
+}
+
+.variant-editorial .site-header .container {
+    width: 100%;
+}
+
+.variant-editorial .hero-title {
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    line-height: 1.02;
+}
+
+.variant-editorial .nav-link {
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-size: 0.73rem;
+}
+
+.variant-editorial .section-title {
+    letter-spacing: 0.01em;
+    font-weight: 500;
+}
+
+.variant-editorial .section-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 0.55rem;
+    background: linear-gradient(90deg, rgba(9, 105, 218, 0.75), rgba(31, 111, 235, 0.12));
+}
+
+.variant-editorial .prop-card,
+.variant-editorial .portfolio-card,
+.variant-editorial .team-card {
+    border-radius: 10px;
+}
+
+.variant-editorial .testimonial-quote {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.variant-editorial .cta-banner .btn-primary {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.76rem;
+}
+
+.variant-editorial .switcher-btn {
+    border-radius: 8px;
+}
+
+.variant-editorial .nav-toggle-bar {
+    background: #ffffff;
+}

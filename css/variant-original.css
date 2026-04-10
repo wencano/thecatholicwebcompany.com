@@ -1,0 +1,421 @@
+/* === Original Variant ===
+   Recreation of the legacy TCWC aesthetic.
+*/
+:root {
+    --c-bg: #f5f5f5;
+    --c-surface: #ffffff;
+    --c-text: #222222;
+    --c-text-muted: #5f5f5f;
+    --c-heading: #1e1e1e;
+    --c-primary: #49b9df;
+    --c-primary-fg: #ffffff;
+    --c-accent: #ef7d5b;
+    --c-border: #dddddd;
+    --c-hero-bg: #1b1b1b;
+    --c-hero-fg: #ffffff;
+    --c-footer-bg: #222c3a;
+    --c-footer-fg: #e3e7ee;
+    --c-cta-bg: #49b9df;
+    --c-cta-fg: #ffffff;
+    --c-card-bg: #ffffff;
+    --c-card-border: #dddddd;
+    --c-switcher-bg: #151515;
+    --c-glow-1: transparent;
+    --c-glow-2: transparent;
+    --c-glow-3: transparent;
+    --glass-blur: 0px;
+    --glass-shadow: none;
+
+    --f-body: 'Open Sans', Arial, sans-serif;
+    --f-heading: 'Oswald', 'Arial Narrow', sans-serif;
+    --radius: 0px;
+    --radius-lg: 0px;
+    --shadow: none;
+    --shadow-lg: none;
+}
+
+.variant-original body {
+    background: #f4f4f4;
+}
+
+.variant-original .variant-switcher {
+    background: transparent;
+    border-bottom: 0;
+}
+
+.variant-original .switcher-toggle,
+.variant-original .switcher-btn {
+    color: #111111;
+}
+
+.variant-original .switcher-toggle,
+.variant-original .switcher-menu {
+    background: #ffffff;
+    border-color: #cfd5de;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+}
+
+.variant-original .switcher-btn {
+    background: #ffffff;
+    border: 1px solid #d1d7e0;
+    border-radius: 2px;
+}
+
+.variant-original .switcher-btn.is-active {
+    background: #49b9df;
+    border-color: #49b9df;
+    color: #ffffff;
+}
+
+.variant-original .site-header {
+    position: relative;
+    top: 0;
+    margin-top: 0;
+    z-index: 20;
+    background: #ffffff;
+}
+
+.variant-original .header-inner {
+    background: #ffffff;
+    color: #444444;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 62px;
+    padding: 0.6rem 0;
+}
+
+.variant-original .logo-img {
+    filter: none;
+    height: 46px;
+}
+
+.variant-original .nav-link {
+    border-radius: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.84rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #666666;
+    opacity: 1;
+}
+
+.variant-original .nav-link:hover,
+.variant-original .nav-link.is-active {
+    background: transparent;
+    color: #49b9df;
+    transform: none;
+}
+
+.variant-original .header-phone {
+    background: transparent;
+    padding: 0;
+    color: #49b9df;
+    font-weight: 700;
+}
+
+.variant-original .hero {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    min-height: 420px;
+    padding: 7.5rem 1rem 7rem;
+    box-shadow: none;
+    background: #262626;
+}
+
+.variant-original .hero::before {
+    display: none;
+}
+
+.variant-original .hero-video-overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.55));
+}
+
+.variant-original .hero-inner {
+    max-width: 760px;
+}
+
+.variant-original .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    text-transform: none;
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+}
+
+.variant-original .hero-subtitle {
+    font-size: 1.45rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    margin-top: 0.2rem;
+}
+
+.variant-original .hero-actions .btn {
+    border-radius: 2px;
+    padding: 0.52rem 1.25rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: none;
+}
+
+.variant-original .hero-actions .btn-primary {
+    background: #8ac44a;
+    border-color: #8ac44a;
+    color: #ffffff;
+}
+
+.variant-original .hero-actions .btn-secondary {
+    background: #ef7d5b;
+    border-color: #ef7d5b;
+    color: #ffffff;
+}
+
+.variant-original .section {
+    padding: 3.5rem 0;
+}
+
+.variant-original .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 300;
+    color: #49b9df;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+.variant-original .props-grid {
+    gap: 2rem;
+}
+
+.variant-original .prop-card {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    text-align: center;
+    padding: 0;
+}
+
+.variant-original .prop-card::after,
+.variant-original .prop-icon {
+    display: none;
+}
+
+.variant-original .prop-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+.variant-original .prop-summary {
+    font-size: 0.83rem;
+    line-height: 1.6;
+    color: #333333;
+    text-align: center;
+}
+
+.variant-original .prop-card .btn-secondary {
+    margin-top: 0.6rem;
+    padding: 0.35rem 0.8rem;
+    border: 0;
+    border-radius: 2px;
+    background: #ef7d5b;
+    color: #ffffff;
+    font-size: 0.68rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.variant-original .cta-banner {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0;
+    padding: 0.9rem 1rem;
+}
+
+.variant-original .cta-title {
+    font-size: 1.05rem;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.variant-original .cta-subtitle {
+    display: inline-block;
+    margin: 0 0.9rem 0 0.35rem;
+    font-size: 0.9rem;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.variant-original .cta-banner .btn-primary {
+    margin-top: 0;
+    padding: 0.32rem 0.7rem;
+    border-radius: 2px;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.variant-original .cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+}
+
+.variant-original .testimonials {
+    margin-top: 0;
+}
+
+.variant-original .video-testimonial-card,
+.variant-original .testimonial-card,
+.variant-original .portfolio-card,
+.variant-original .team-card,
+.variant-original .values-list,
+.variant-original .about-preview,
+.variant-original .article-main,
+.variant-original .sidebar-card,
+.variant-original .contact-form {
+    border-radius: 2px;
+    border: 1px solid #e1e1e1;
+    box-shadow: none;
+    backdrop-filter: none;
+    background: #ffffff;
+}
+
+.variant-original .about-preview {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-left: 0;
+    border-right: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.6)), url('https://thecatholicwebcompany.com/uploads/images/blurrychurchbackground.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+.variant-original .about-preview .section-title {
+    margin: 0;
+    padding: 40px 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2e363f;
+}
+
+.variant-original .about-preview .section-title strong {
+    color: #48c0ed;
+    font-weight: 700;
+}
+
+.variant-original .about-preview-inner {
+    max-width: 1160px;
+}
+
+.variant-original .about-preview-text {
+    padding: 1.8rem 0 2.1rem;
+    text-align: center;
+}
+
+.variant-original .about-preview-text p {
+    color: #ffffff;
+    font-size: 1.45rem;
+    line-height: 1.45;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.variant-original .site-footer {
+    margin-top: 0;
+    padding-top: 2rem;
+    background: #263141;
+}
+
+.variant-original .prefooter-bar {
+    background: #1f2837;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.25rem 0;
+    margin-top: 0;
+}
+
+.variant-original .prefooter-bar-text {
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+    .variant-original .cta-inner {
+        flex-wrap: wrap;
+        gap: 0.45rem 0.75rem;
+    }
+
+    .variant-original .cta-title {
+        width: 100%;
+        white-space: normal;
+        font-size: 0.98rem;
+    }
+
+    .variant-original .cta-subtitle {
+        display: block;
+        margin: 0;
+        white-space: normal;
+    }
+
+    .variant-original .cta-banner .btn-primary {
+        margin-top: 0.15rem;
+    }
+
+    .variant-original .header-inner {
+        min-height: 58px;
+        padding: 0.6rem 0.9rem;
+    }
+
+    .variant-original .hero {
+        min-height: 340px;
+        padding: 5.8rem 1rem 4.8rem;
+    }
+
+    .variant-original .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .variant-original .section-title {
+        font-size: 1.9rem;
+    }
+
+    .variant-original .prefooter-bar-text {
+        font-size: 1.7rem;
+    }
+
+    .variant-original .about-preview .section-title {
+        padding: 26px 0;
+        font-size: 1.75rem;
+    }
+
+    .variant-original .about-preview-text {
+        padding: 1.4rem 0 1.8rem;
+    }
+
+    .variant-original .about-preview-text p {
+        font-size: 1.15rem;
+    }
+}

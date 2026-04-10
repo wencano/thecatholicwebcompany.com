@@ -1,0 +1,75 @@
+/* === Modern Variant ===
+   Neon pastel gradients, smooth glass, dynamic highlights.
+*/
+:root {
+    --c-bg: #eef4ff;
+    --c-surface: #edf2ff;
+    --c-text: #27334f;
+    --c-text-muted: #5a688a;
+    --c-heading: #0d1937;
+    --c-primary: #586dff;
+    --c-primary-fg: #ffffff;
+    --c-accent: #ff7db4;
+    --c-border: rgba(101, 119, 191, 0.26);
+    --c-hero-bg: #172a70;
+    --c-hero-fg: #f8f9ff;
+    --c-footer-bg: #101a3d;
+    --c-footer-fg: #d0dafd;
+    --c-cta-bg: #596aff;
+    --c-cta-fg: #ffffff;
+    --c-card-bg: rgba(255, 255, 255, 0.64);
+    --c-card-border: rgba(255, 255, 255, 0.56);
+    --c-switcher-bg: rgba(243, 246, 255, 0.72);
+    --c-glow-1: rgba(112, 209, 255, 0.34);
+    --c-glow-2: rgba(255, 154, 211, 0.3);
+    --c-glow-3: rgba(170, 187, 255, 0.3);
+
+    --f-body: 'Manrope', system-ui, sans-serif;
+    --f-heading: 'Sora', 'Manrope', sans-serif;
+}
+
+.variant-modern .hero {
+    background:
+        radial-gradient(circle at 12% 20%, rgba(170, 220, 255, 0.38), transparent 36%),
+        radial-gradient(circle at 88% 18%, rgba(255, 170, 230, 0.32), transparent 33%),
+        linear-gradient(125deg, #132862, #28439b 42%, #1f57ae 72%, #3858d0);
+}
+
+.variant-modern .nav-link:hover,
+.variant-modern .nav-link.is-active {
+    background: rgba(169, 194, 255, 0.28);
+}
+
+.variant-modern .prop-card:nth-child(1) { border-color: rgba(126, 188, 255, 0.7); }
+.variant-modern .prop-card:nth-child(2) { border-color: rgba(255, 159, 223, 0.62); }
+.variant-modern .prop-card:nth-child(3) { border-color: rgba(174, 173, 255, 0.7); }
+
+.variant-modern .section-title {
+    position: relative;
+    display: inline-block;
+    padding-right: 1.4rem;
+}
+
+.variant-modern .section-title::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0.46em;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 999px;
+    background: linear-gradient(140deg, var(--c-primary), var(--c-accent));
+    filter: blur(0.2px);
+}
+
+.variant-modern .portfolio-card:hover .portfolio-icon {
+    transform: scale(1.06);
+}
+
+.variant-modern .portfolio-icon {
+    transition: transform 0.25s ease;
+}
+
+.variant-modern .nav-toggle-bar {
+    background: #ffffff;
+}
