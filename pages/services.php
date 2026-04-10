@@ -20,7 +20,7 @@ $services = [
 $services_articles = [
     [
         'title' => 'So, how does The Catholic Web Company build and maintain my Parish or Ministry\'s website?',
-        'date' => '03-01-2013',
+        'topic' => 'Build + Maintain Process',
         'video_url' => 'https://player.vimeo.com/video/202326804',
         'paragraphs' => [
             'Well, first, we create you a great website that not only WORKS, but highlights your best traits.',
@@ -31,7 +31,7 @@ $services_articles = [
     ],
     [
         'title' => 'We ARE the Content Management System',
-        'date' => '03-01-2013',
+        'topic' => 'Hands-Off Website Management',
         'video_url' => 'https://player.vimeo.com/video/202327626',
         'paragraphs' => [
             'At The Catholic Web Company, we are often asked if we can build a website for a Parish or Ministry that they themselves can manage and maintain.',
@@ -41,7 +41,7 @@ $services_articles = [
     ],
     [
         'title' => 'We can maintain your website regardless of your location',
-        'date' => '03-01-2013',
+        'topic' => 'Nationwide Remote Support',
         'video_url' => 'https://player.vimeo.com/video/202328173',
         'paragraphs' => [
             'Because the internet is accessible from any computer or mobile device anywhere in the world, we can efficiently maintain your website, regardless of your location.',
@@ -51,7 +51,7 @@ $services_articles = [
     ],
     [
         'title' => 'We offer several affordable options',
-        'date' => '03-01-2013',
+        'topic' => 'Affordable, Predictable Pricing',
         'video_url' => 'https://player.vimeo.com/video/202328489',
         'paragraphs' => [
             'After we determine your needs, we will recommend a maintenance package best suited to your Parish or organization.',
@@ -61,7 +61,7 @@ $services_articles = [
     ],
     [
         'title' => 'Do you offer services such as E-Newsletters, Social Media or Video Streaming?',
-        'date' => '03-01-2013',
+        'topic' => 'Add-On Communication Services',
         'video_url' => 'https://player.vimeo.com/video/202328927',
         'paragraphs' => [
             'At The Catholic Web Company, we offer many additional services and we\'ll be happy to talk with you, in order to determine your needs.',
@@ -71,7 +71,7 @@ $services_articles = [
     ],
     [
         'title' => 'Why is it important that your site be Mobile-Friendly?',
-        'date' => '02-03-2017',
+        'topic' => 'Mobile-First User Experience',
         'video_url' => 'https://player.vimeo.com/video/202330588',
         'paragraphs' => [
             'Did you know that in today\'s world about 88% of all daily internet traffic comes from some type of mobile device, that is, a smart phone or tablet?',
@@ -81,7 +81,7 @@ $services_articles = [
     ],
     [
         'title' => 'How can my Parish or ministry actually make a difference online?',
-        'date' => '02-03-2017',
+        'topic' => 'Digital Evangelization Impact',
         'video_url' => 'https://player.vimeo.com/video/202331087',
         'paragraphs' => [
             'In today\'s vast, interconnected digital world, people learn and gather information in so many different ways.',
@@ -123,7 +123,7 @@ require __DIR__ . '/../templates/components/value-props.php';
                     <?php endif; ?>
 
                     <div class="service-qa-content">
-                        <p class="service-qa-date"><strong><?= htmlspecialchars($item['date']) ?></strong></p>
+                        <p class="service-qa-label"><strong><?= htmlspecialchars($item['topic']) ?></strong></p>
                         <h3><?= htmlspecialchars($item['title']) ?></h3>
                         <?php foreach ($item['paragraphs'] as $text): ?>
                             <?php if (stripos($text, 'SendUsStuff.com') !== false): ?>

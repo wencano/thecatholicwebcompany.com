@@ -586,7 +586,7 @@
     order: 1;
 }
 
-.services-detail .service-qa-date {
+.services-detail .service-qa-label {
     margin-bottom: 0.45rem;
     color: var(--c-primary);
     font-size: var(--fs-sm);

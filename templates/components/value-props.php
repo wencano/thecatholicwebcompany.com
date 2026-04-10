@@ -25,13 +25,13 @@
                     <?php else: ?>
                         <p class="prop-summary"><?= htmlspecialchars($svc['summary']) ?></p>
                     <?php endif; ?>
-                    <?php if ($current_path === '/' && $svc['icon'] === 'maintain'): ?>
+                    <?php if ($svc['icon'] === 'maintain'): ?>
                         <p><a href="<?= url('/services') ?>" class="btn btn-secondary">Read About Our Services</a></p>
                     <?php endif; ?>
-                    <?php if ($current_path === '/' && $svc['icon'] === 'ministry'): ?>
+                    <?php if ($svc['icon'] === 'ministry'): ?>
                         <p><a href="<?= url('/church-internet') ?>" class="btn btn-secondary">The Church &amp; the Internet</a></p>
                     <?php endif; ?>
-                    <?php if ($current_path === '/' && $svc['icon'] === 'build'): ?>
+                    <?php if ($svc['icon'] === 'build'): ?>
                         <p><a href="<?= url('/portfolio') ?>" class="btn btn-secondary">View Our Portfolio</a></p>
                     <?php endif; ?>
                 </div>
