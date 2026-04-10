@@ -59,6 +59,8 @@
 
 .variant-classic .header-inner {
     border: 0;
+    background: var(--c-footer-bg);
+    color: var(--c-footer-fg);
 }
 
 .variant-classic .site-header .container {
