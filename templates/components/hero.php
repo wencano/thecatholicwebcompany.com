@@ -1,6 +1,26 @@
-<section class="hero">
-    <?php if (!empty($hero_video_mp4) || !empty($hero_video_webm)): ?>
-        <video class="hero-video" autoplay muted loop playsinline>
+<?php
+$has_hero_video = !empty($hero_video_mp4) || !empty($hero_video_webm);
+$has_hero_poster = !empty($hero_poster);
+$hero_classes = 'hero';
+if ($has_hero_video) {
+    $hero_classes .= ' has-video';
+}
+if ($has_hero_poster) {
+    $hero_classes .= ' has-poster';
+}
+?>
+<section class="<?= htmlspecialchars($hero_classes) ?>">
+    <?php if ($has_hero_video): ?>
+        <?php if ($has_hero_poster): ?>
+            <img
+                class="hero-poster"
+                src="<?= htmlspecialchars($hero_poster) ?>"
+                alt=""
+                aria-hidden="true"
+                loading="eager"
+                decoding="async">
+        <?php endif; ?>
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata">
             <?php if (!empty($hero_video_mp4)): ?>
                 <source src="<?= htmlspecialchars($hero_video_mp4) ?>" type="video/mp4">
             <?php endif; ?>

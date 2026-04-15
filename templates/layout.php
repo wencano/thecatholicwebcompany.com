@@ -40,6 +40,13 @@
     <script>
     // Mobile nav toggle
     document.addEventListener('DOMContentLoaded', function() {
+        const syncAnnouncementOffset = function() {
+            const announcementBar = document.querySelector('.announcement-bar');
+            const offset = announcementBar ? Math.ceil(announcementBar.getBoundingClientRect().height) : 0;
+            document.documentElement.style.setProperty('--announcement-offset', offset + 'px');
+        };
+        syncAnnouncementOffset();
+
         const switcher = document.querySelector('.variant-switcher');
         const switcherToggle = document.querySelector('.switcher-toggle');
         if (switcher && switcherToggle) {
@@ -113,6 +120,7 @@
         });
 
         window.addEventListener('resize', function() {
+            syncAnnouncementOffset();
             accordionItems.forEach(function(item) {
                 const panel = getPanel(item);
                 if (!panel) return;
@@ -120,6 +128,23 @@
                     panel.style.height = 'auto';
                 }
             });
+        });
+
+        // Hero poster-first behavior: reveal video only when it can render.
+        document.querySelectorAll('.hero.has-poster .hero-video').forEach(function(video) {
+            const hero = video.closest('.hero');
+            if (!hero) return;
+
+            const revealVideo = function() {
+                hero.classList.add('is-video-ready');
+            };
+
+            if (video.readyState >= 2) {
+                revealVideo();
+            } else {
+                video.addEventListener('loadeddata', revealVideo, { once: true });
+                video.addEventListener('canplay', revealVideo, { once: true });
+            }
         });
     });
     </script>

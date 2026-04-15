@@ -112,6 +112,7 @@ $hero_cta2 = 'Watch Video';
 $hero_cta2_url = '/tcwcinfo';
 $hero_video_mp4 = $remote . '/uploads/video/tcwcbg.m4v';
 $hero_video_webm = $remote . '/uploads/video/tcwcbg.webm';
+$hero_poster = asset('/assets/images/tcwcvideobg.webp');
 require __DIR__ . '/../templates/components/hero.php';
 
 // === 2. Value props (We Build / Maintain / Focus) ===
