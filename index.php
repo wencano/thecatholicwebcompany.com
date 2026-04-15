@@ -2,6 +2,14 @@
 
 require_once __DIR__ . '/config.php';
 
+// Aggressive no-cache headers (intentionally strict for low-traffic site).
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Cache-Control: post-check=0, pre-check=0', false);
+header('Pragma: no-cache');
+header('Expires: 0');
+
+$cache_buster = (string) round(microtime(true) * 1000000) . '-' . mt_rand(1000, 9999);
+
 // Variant selection
 $variant = $_GET['variant'] ?? 'original';
 if (!array_key_exists($variant, $variants)) {
@@ -54,8 +62,10 @@ function url($path) {
 
 // CSS/asset path helper
 function asset($path) {
-    global $base_dir;
-    return $base_dir . $path;
+    global $base_dir, $cache_buster;
+    $full = $base_dir . $path;
+    $sep = (strpos($full, '?') !== false) ? '&' : '?';
+    return $full . $sep . 'v=' . rawurlencode($cache_buster);
 }
 
 // Render
