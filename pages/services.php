@@ -118,7 +118,6 @@ require __DIR__ . '/../templates/components/value-props.php';
                                     loading="lazy"
                                     title="<?= htmlspecialchars($item['title']) ?> Video"></iframe>
                             </div>
-                            <p><a href="<?= htmlspecialchars($item['video_url']) ?>" target="_blank" rel="noopener noreferrer">Open video in new tab</a></p>
                         </div>
                     <?php endif; ?>
 
@@ -130,7 +129,7 @@ require __DIR__ . '/../templates/components/value-props.php';
                                 <p>
                                     <?= str_replace(
                                         'www.SendUsStuff.com',
-                                        '<a href="http://www.sendusstuff.com/" target="_blank" rel="noopener noreferrer">www.SendUsStuff.com</a>',
+                                        '<a href="http://www.sendusstuff.com/" target="_blank" rel="noopener noreferrer" class="sendusstuff-link">www.SendUsStuff.com</a>',
                                         htmlspecialchars($text)
                                     ) ?>
                                 </p>

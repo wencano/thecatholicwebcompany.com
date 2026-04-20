@@ -18,7 +18,7 @@
                         <p class="prop-summary">
                             <?= str_replace(
                                 'sendusstuff.com',
-                                '<a href="http://www.sendusstuff.com/" target="_blank" rel="noopener noreferrer">sendusstuff.com</a>',
+                                '<a href="http://www.sendusstuff.com/" target="_blank" rel="noopener noreferrer" class="sendusstuff-link">sendusstuff.com</a>',
                                 htmlspecialchars($svc['summary'])
                             ) ?>
                         </p>

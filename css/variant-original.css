@@ -68,16 +68,12 @@
     color: #ffffff;
 }
 
-.variant-original p a,
-.variant-original li a,
-.variant-original address a {
+.variant-original main a:not(.btn):not(.nav-link):not(.switcher-btn) {
     color: #ef7d5b;
 }
 
-.variant-original p a:hover,
-.variant-original li a:hover,
-.variant-original address a:hover {
-    color: #d96b49;
+.variant-original .site-footer a:not(.btn):not(.nav-link):not(.switcher-btn):hover {
+    color: #ffffff;
 }
 
 .variant-original .announcement-inner {
@@ -294,7 +290,7 @@
     border-radius: 0;
     box-shadow: none;
     border: 0;
-    padding: 0.9rem 1rem;
+    padding: 30px 1rem;
 }
 
 .variant-original .cta-title {
@@ -302,20 +298,21 @@
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    white-space: nowrap;
+    white-space: normal;
+    text-align: center;
 }
 
 .variant-original .cta-subtitle {
-    display: inline-block;
-    margin: 0 0.9rem 0 0.35rem;
+    display: block;
+    margin: 0;
     font-size: 1.45rem;
     font-weight: 600;
-    vertical-align: middle;
-    white-space: nowrap;
+    text-align: center;
+    white-space: normal;
 }
 
 .variant-original .cta-banner .btn-primary {
-    margin-top: 0;
+    margin-top: 0.35rem;
     padding: 0.32rem 0.7rem;
     border-radius: 2px;
     font-size: 0.88rem;
@@ -327,7 +324,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
+    flex-direction: column;
+    gap: 0.55rem;
     flex-wrap: nowrap;
 }
 
@@ -416,9 +414,9 @@
     text-align: center;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
-    font-size: 2.9rem;
+    font-size: 2em;
     font-style: italic;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 0.01em;
     line-height: 1.1;
 }
